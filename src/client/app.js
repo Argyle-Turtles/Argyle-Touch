@@ -21,9 +21,10 @@ const isTouch = finger => {
 export const init = () => {
   try {
     Leap.loop({
-      hand: ({ fingers }) => {
+      hand: (hand) => {
         // console.log('hi');
-        console.log(isTouch(getIndexFinger(fingers)));
+        console.log(hand);
+        // console.log(isTouch(getIndexFinger(fingers)));
       },
     })
   }
